@@ -22,6 +22,7 @@ import TextField from "@mui/material/TextField";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 
+
 const AdminTable = () => {
   const [term, setTerm] = useState("");
   const [adminData, setAdminData] = useState([]);
@@ -123,8 +124,10 @@ const AdminTable = () => {
   const selectRow = (userId) => {
     if (!selectedRows.includes(userId)) {
       setSelectedRows([...selectedRows, userId]);
+      
     } else {
       setSelectedRows(selectedRows.filter((id) => id !== userId));
+      
     }
   };
 
@@ -320,12 +323,12 @@ const AdminTable = () => {
         mt={2}
       >
         <Box>
-          <Button
+          <button
             className={ischecked ? "btn-del" : "btn-del disabled"}
             onClick={deleteSelected}
           >
             Delete Selected
-          </Button>
+          </button>
         </Box>
         <Pagenition
           totalPages={totalPage}

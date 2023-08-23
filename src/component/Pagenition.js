@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton";
+
 import LastPageIcon from "@mui/icons-material/LastPage";
 import FirstPageIcon from "@mui/icons-material/FirstPage";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
@@ -25,48 +25,49 @@ const Pagenition = ({ totalPages, onPagechange, currentPage }) => {
 
   return (
     <Box>
-      <Stack direction="row" justifyContent="center" spacing={2}>
-        <IconButton
-          className={`circular-button ${isFirstPage ? "disabled" : ""}`}
+      <Stack direction="row" justifyContent="center" alignItems="center" spacing={2}>
+        <button
+          className={`circular-btn ${isFirstPage ? "disabled" : ""}`}
+          
           onClick={() => handlePage(1)}
           disabled={isFirstPage}
         >
           <FirstPageIcon />
-        </IconButton>
-        <IconButton
-          className={`circular-button ${isFirstPage ? "disabled" : ""}`}
+        </button>
+        <button
+          className={`circular-btn ${isFirstPage ? "disabled" : ""}`}
           onClick={() => handlePage(currentPage - 1)}
           disabled={isFirstPage}
         >
           <NavigateBeforeIcon />
-        </IconButton>
+        </button>
         {getButtons().map((button) => {
           return (
-            <IconButton
+            <button
               key={button}
-              className={`circular-button ${
+              className={`circular-btn ${
                 currentPage === button ? "active" : ""
               }`}
               onClick={() => handlePage(button)}
             >
               {button}
-            </IconButton>
+            </button>
           );
         })}
-        <IconButton
-          className={`circular-button ${LastPage ? "disabled" : ""}`}
+        <button
+          className={`circular-btn ${LastPage ? "disabled" : ""}`}
           onClick={() => handlePage(currentPage + 1)}
           disabled={LastPage}
         >
           <NavigateNextIcon />
-        </IconButton>
-        <IconButton
-          className={`circular-button ${LastPage ? "disabled" : ""}`}
+        </button>
+        <button
+          className={`circular-btn ${LastPage ? "disabled" : ""}`}
           onClick={() => handlePage(totalPages)}
           disabled={LastPage}
         >
           <LastPageIcon />
-        </IconButton>
+        </button>
       </Stack>
     </Box>
   );
