@@ -1,0 +1,45 @@
+
+  
+  .circular-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .circular-button:hover {
+    border: 2px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+  }
+  
+  .circular-button.active {
+    border: 2px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+  }
+  
+  .circular-button.disabled {
+    background-color: rgb(236, 234, 234);
+  }
+  
+  .btn-del {
+    height: 40px;
+    color: white;
+    border-radius: 20px;
+    background-color: red;
+  }
+  
+  .btn-del:hover {
+    border: 2px solid red;
+    background-color: transparent;
+    color: red;
+  }
+  
+  .btn-del.disabled {
+    color: red;
+    background-color: rgb(236, 234, 234);
+  }
