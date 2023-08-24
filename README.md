@@ -33,7 +33,7 @@ git clone https://github.com/Akash-821101/React-Dashboard.git
 2. Navigate to the project directory:
 
 ```bash
-cd react-adminui
+cd react-Dashboard-master
 
 ```
 
